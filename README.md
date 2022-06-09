@@ -2,7 +2,10 @@
 Criando a minha primeira API usando Lumen.
 
 
-## Iniciar o servidor
+## Iniciar o serviço
 ```
+composer update --with-all-dependencies &&
+cp .env.example .env && 
+php artisan migrate:fresh &&
 php -S 127.0.0.1:8000 -t public/
 ```
