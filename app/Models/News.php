@@ -24,4 +24,4 @@ class News extends Model
     {
         return $this->hasMany(ImageNews::class);
     }
-};
+}

@@ -17,4 +17,4 @@ class ImageNews extends Model
         'descricao',
         'ativo'
     ];
-};
+}
