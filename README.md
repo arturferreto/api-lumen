@@ -4,6 +4,8 @@ Criando a minha primeira API usando Lumen.
 
 ## Iniciar o serviço
 ```
+git clone https://github.com/arturferreto/api-lumen.git &&
+cd api-lumen/ &&
 composer update --with-all-dependencies &&
 cp .env.example .env && 
 php artisan migrate:fresh &&
