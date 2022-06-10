@@ -23,6 +23,10 @@ abstract class AbstractController extends BaseController implements ControllerIn
      */
     protected array $searchFields = [];
 
+    /**
+     * AbstractController Constructor.
+     * @param ServiceInterface $service
+     */
     public function __construct(ServiceInterface $service)
     {
         $this->service = $service;
