@@ -6,7 +6,7 @@ use App\Repositories\AbstractRepository;
 
 /**
  * Class NewsRepository
- * @package App\Repositories
+ * @package App\Repositories\Models
  */
 class NewsRepository extends AbstractRepository
 {
