@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('subtitulo', 155);
             $table->text('descricao');
             $table->dateTime('publicado_em');
+            $table->string('slug', 255);
             $table->boolean('ativo')->default(1);
             $table->timestamps();
             $table->softDeletes();

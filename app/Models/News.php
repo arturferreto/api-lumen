@@ -17,6 +17,7 @@ class News extends Model
         'subtitulo',
         'descricao',
         'publicado_em',
+        'slug',
         'ativo'
     ];
 
