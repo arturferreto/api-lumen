@@ -139,7 +139,6 @@ abstract class AbstractController extends BaseController implements ControllerIn
         return [
             'status_code' => $statusCode,
             'data' => $data
-
         ];
     }
 
