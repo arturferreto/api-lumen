@@ -19,8 +19,12 @@ class AuthorController extends AbstractController
         'sobrenome'
     ];
 
+    /**
+     * AuthorController Construtor.
+     * @param AuthorService $service
+     */
     public function __construct(AuthorService $service)
     {
-        $this->service = $service;
+        parent::__construct($service);
     }
 }
