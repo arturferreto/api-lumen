@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Repositories\Models;
+namespace App\Repositories\Specific;
 
 use App\Repositories\AbstractRepository;
 
 /**
  * Class NewsRepository
- * @package App\Repositories\Models
+ * @package App\Repositories\Specific
  */
 class NewsRepository extends AbstractRepository
 {

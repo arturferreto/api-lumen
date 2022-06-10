@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Repositories\Models;
+namespace App\Repositories\Specific;
 
 use App\Repositories\AbstractRepository;
 
 /**
  * Class AuthorRepository
- * @package App\Repositories\Models
+ * @package App\Repositories\Specific
  */
 class AuthorRepository extends AbstractRepository
 {
