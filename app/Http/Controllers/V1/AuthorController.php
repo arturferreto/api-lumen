@@ -7,7 +7,7 @@ use App\Services\Specific\AuthorService;
 
 /**
  * Class AuthorController
- * @package App\Http\Controller\V1
+ * @package App\Http\Controllers\V1
  */
 class AuthorController extends AbstractController
 {
