@@ -14,7 +14,7 @@ class AuthorController extends AbstractController
     /**
      * @var array|string[]
      */
-    protected $searchFields = [
+    protected array $searchFields = [
         'nome',
         'sobrenome'
     ];
