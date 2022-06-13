@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('sobrenome', 60);
             $table->string('email', 100);
             $table->string('senha', 255);
-            $table->char('sexo');
+            $table->char('sexo', 1);
             $table->boolean('ativo')->default(1);
             $table->timestamps();
             $table->softDeletes();
