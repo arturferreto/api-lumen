@@ -39,7 +39,7 @@ $router->group(['prefix' => 'api/v1', 'namespace' => 'V1'], function() use ($rou
     $router->post('/imagens-noticias', ['uses' => 'ImageNewsController@create']);
     $router->get('/imagens-noticias', ['uses' => 'ImageNewsController@findAll']);
     $router->get('/imagens-noticias/{id}', ['uses' => 'ImageNewsController@findOneBy']);
-    $router->get('imagens-noticias/noticia/{news}', ['uses' => 'ImageNewsController@findByNews']);
+    $router->get('/imagens-noticias/noticia/{news}', ['uses' => 'ImageNewsController@findByNews']);
     $router->put('/imagens-noticias/{param}', ['uses' => 'ImageNewsController@editBy']);
     $router->delete('/imagens-noticias/{id}', ['uses' => 'ImageNewsController@delete']);
     $router->delete('/imagens-noticias/noticia/{news}', ['uses' => 'ImageNewsController@deleteByNews']);
