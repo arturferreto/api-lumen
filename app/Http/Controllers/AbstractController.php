@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Exception;
+use App\Helpers\OrderByHelper;
 use App\Services\ServiceInterface;
 use Illuminate\Http\{JsonResponse, Request, Response};
 use Laravel\Lumen\Routing\Controller as BaseController;
@@ -58,6 +59,11 @@ abstract class AbstractController extends BaseController implements ControllerIn
         try {
             $limit = (int) $request->get('limit', 10);
             $orderBy = $request->get('order_by', []);
+
+            if (!empty($orderBy)) {
+                $orderBy = OrderByHelper::treatOrderBy($orderBy);
+            }
+
             $searchString = $request->get('q', '');
 
             if (!empty($searchString)) {
