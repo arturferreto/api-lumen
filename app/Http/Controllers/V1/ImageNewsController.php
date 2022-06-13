@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Http\Controllers\AbstractController;
-use App\Services\Specific\ImageNewsService;
 use Exception;
 use Illuminate\Http\{JsonResponse, Request};
+use App\Http\Controllers\AbstractController;
+use App\Services\Specific\ImageNewsService;
 
 /**
  * Class ImageNewsController
@@ -53,9 +53,9 @@ class ImageNewsController extends AbstractController
     public function deleteByNews(Request $request, int $news): JsonResponse
     {
         try {
-            $result = $this->service->deleteByNews($news);
+            $result['deletado'] = $this->service->deleteByNews($news);
 
-            $response = $this->successResponse(['deletado' => $result]); //https://www.youtube.com/watch?v=x25KkFANuYI
+            $response = $this->successResponse($result);
         } catch (Exception $e) {
             $response = $this->errorResponse($e);
         }
