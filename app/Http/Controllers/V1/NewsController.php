@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\V1;
 
 use Exception;
+use Illuminate\Http\{JsonResponse, Request, Response};
 use App\Http\Controllers\AbstractController;
 use App\Services\Specific\NewsService;
-use Illuminate\Http\{JsonResponse, Request, Response};
+use App\Helpers\OrderByHelper;
 
 /**
  * Class NewsController
@@ -41,6 +42,10 @@ class NewsController extends AbstractController
         try {
             $limit = (int) $request->get('limit', 10);
             $orderBy = $request->get('order_by', []);
+
+            if (!empty($orderBy)) {
+                $orderBy = OrderByHelper::treatOrderBy($orderBy);
+            }
 
             $result = $this->service->findByAuthor($author, $limit, $orderBy);
             $response = $this->successResponse($result, Response::HTTP_PARTIAL_CONTENT);
