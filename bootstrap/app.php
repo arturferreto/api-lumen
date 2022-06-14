@@ -27,6 +27,8 @@ $app->withFacades();
 
 $app->withEloquent();
 
+app('translator')->setlocale('pt_BR');
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
