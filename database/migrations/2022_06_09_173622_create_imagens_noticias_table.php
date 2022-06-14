@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('imagens_noticias', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('noticia_id');
-            $table->text('imagem');
+            $table->longText('imagem');
             $table->string('descricao', 255);
             $table->boolean('ativo')->default(1);
             $table->timestamps();
