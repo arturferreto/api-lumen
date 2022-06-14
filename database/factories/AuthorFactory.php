@@ -25,7 +25,7 @@ class AuthorFactory extends Factory
             'nome' => $this->faker->firstName(),
             'sobrenome' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail,
-            'senha' => $this->faker->password(),
+            'senha' => $this->faker->numberBetween(1000, 10000),
             'sexo' => $this->faker->randomElement(['F', 'M']),
             'ativo' => true,
         ];
