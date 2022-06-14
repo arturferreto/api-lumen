@@ -67,12 +67,7 @@ abstract class AbstractController extends BaseController implements ControllerIn
             $searchString = $request->get('q', '');
 
             if (!empty($searchString)) {
-                $result = $this->service->searchBy(
-                    $searchString,
-                    $this->searchFields,
-                    $limit,
-                    $orderBy
-                );
+                $result = $this->service->searchBy($searchString, $this->searchFields, $limit, $orderBy);
             } else {
                 $result = $this->service->findAll($limit, $orderBy);
             }
