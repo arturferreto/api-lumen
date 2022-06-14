@@ -1,5 +1,7 @@
 # API Lumen
-Criando a minha primeira API usando Lumen.
+Este foi um teste muito promissor do framework Lumen (Mini framework Laravel), infelizmente foi descontinuado pois o Lumen não é mais recomendado pelos desenvolvedores do Laravel atualmente. Todos os próximos projeto de API's serão diretamente pelo Framework Laravel.
+
+A estrutura deste projeto segue em: Routes > Controllers > Services > Repositories > Models
 
 ## Iniciar o serviço
 ```
